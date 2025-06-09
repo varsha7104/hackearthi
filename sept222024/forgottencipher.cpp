@@ -1,4 +1,5 @@
-/*In an ancient library, you discover a cipher that is encrypted by shifting each 
+/*Forgotten Cipher
+In an ancient library, you discover a cipher that is encrypted by shifting each 
 character in a word based on its position The first character shifts by 1, the second by 2,
  and so on. now it is your duty to Decode the cipher to reveal the hidden messages.
 Given a string of lowercase letters, shift each character back by its position (1-based). 

@@ -8,7 +8,9 @@ However, the maze is treacherous. Some blocks are cursed and cannot be stepped o
  represented by the number 1. These blocks are impassable. The remaining blocks are safe,
   represented by the number 0, and you can walk on them.
 
-Your task is to find the shortest path through the maze to escape from the top-left corner to the bottom-right corner. You can move up, down, left, or right, but you cannot move diagonally. If there is no possible way to escape, the maze will trap you forever.
+Your task is to find the shortest path through the maze to escape from the top-left
+ corner to the bottom-right corner. You can move up, down, left, or right, but you cannot
+  move diagonally. If there is no possible way to escape, the maze will trap you forever.
 
 Can you find your way out of the Maze of Shadows?
 
