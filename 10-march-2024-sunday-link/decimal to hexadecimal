@@ -1,0 +1,9 @@
+t=int(input())
+for i in range(t):
+    x=int(input())
+    s=str(hex(x)[2:])
+    print(s.upper())
+  output
+  1
+  10
+  A

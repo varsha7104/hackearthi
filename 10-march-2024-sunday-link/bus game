@@ -1,0 +1,28 @@
+multiples of 5 to be replaced with the word bus
+#include <iostream>
+using namespace std;
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+		int a,b;
+		cin>>a>>b;
+		int i,j,c=0;
+		for(i=0;i<a;i++){
+			for(j=0;j<b;j++){
+				c++;
+				if(c%5!=0)
+				cout<<'('<<c<<')'<<" ";
+				else
+				 cout<<'('<<"BUS"<<')'<<" ";
+			}
+			cout<<endl;
+		}
+	}
+}
+output
+1
+3 3 
+(1) (2) (3)
+(4) (BUS) (6)
+(7) (8) (9)

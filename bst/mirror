@@ -1,0 +1,66 @@
+find the mirror image of inorder traversal of inserting the elements in level order traversal in a complete binary tree
+#include <iostream>
+#include<stdlib.h>
+#include<vector>
+using namespace std;
+struct node {
+    int data;
+    struct node *left=NULL;
+    struct node *right=NULL;
+};
+struct node* create(int x){
+    struct node *root=(struct node *)malloc(sizeof(struct node));
+    root->data=x;
+    return root;
+}
+struct node* insert(int a[],int i,int n){
+    struct node *root;
+    if(i>=n)
+    return NULL;
+    if(i<n){
+        root=create(a[i]);
+        root->left=insert(a,2*i+1,n);
+        root->right=insert(a,2*i+2,n);
+    }
+    return root;
+}
+vector<int> inorder(struct node *root,vector<int>& v){
+    if(root!=NULL){
+        inorder(root->left,v);
+        v.push_back(root->data);
+        inorder(root->right,v);
+    }
+    return v;
+}
+int main() {
+    // Write C++ code here
+    struct node *root=NULL;
+   int n;
+   cin>>n;
+   int a[n],i;
+   for(i=0;i<n;i++){
+       cin>>a[i];
+   }
+   root=insert(a,0,n);
+   vector<int>v;
+   inorder(root,v);
+   for(auto it:v){
+       cout<<it<<" ";
+   }
+   cout<<endl;
+   int j=v.size()-1;
+   i=0;
+   while(i<=j){
+       swap(v[i++],v[j--]);
+   }
+   for(auto it:v){
+       cout<<it<<" ";
+   }
+   cout<<endl;
+    return 0;
+}
+output
+5
+16 8 12 5 4
+5 8 4 16 12 
+12 16 4 8 5 

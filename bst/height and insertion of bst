@@ -1,0 +1,64 @@
+#include <iostream>
+#include<stdlib.h>
+using namespace std;
+struct node{
+    int data;
+    struct node *left=NULL;
+    struct node *right=NULL;
+};
+struct node* create(int x){
+    struct node *newnode=(struct node *)malloc(sizeof(struct node));
+    newnode->data=x;
+    return newnode;
+}
+struct node* insert(struct node *root,int x){
+    if(root==NULL)
+    root=create(x);
+    else if(root->data>x)
+    root->left=insert(root->left,x);
+    else
+    root->right=insert(root->right,x);
+    return root;
+}
+int height(struct node *root){
+    if(root==NULL)
+    return 0;
+    else
+    return max(height(root->left),height(root->right))+1;
+}
+int main() {
+    // Write C++ code here
+    struct node *root=NULL;
+    int t;
+    cin>>t;
+    while(t--){
+
+int n,x,ans;
+cin>>n;
+if(n==1)
+{
+    ans=height(root);
+    if(ans==0)
+    cout<<-1<<endl;
+    else
+    cout<<ans;
+}
+else if(n==0){
+    cin>>x;
+    root=insert(root,x);
+    
+}
+}
+    return 0;
+}
+output
+5
+1
+-1
+1
+-1
+1
+-1
+0 5
+1
+1
