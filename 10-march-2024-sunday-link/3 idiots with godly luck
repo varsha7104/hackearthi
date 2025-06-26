@@ -1,0 +1,34 @@
+three friends alpha,beta and gamma saw a treasure they have to choose the max value of diamond such that their share is max following the order print their shares respectively
+ #include <iostream>
+#include<algorithm>
+using namespace std;
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+		long long int n;
+		cin>>n;
+long long int a[n],i;
+for(i=0;i<n;i++){
+	cin>>a[i];
+}
+int j,temp;
+sort(a,a+n,greater<long long>());
+long long int al=0,b=0,g=0;
+for(i=0;i<n;i++){
+if(i%3==0)
+al+=a[i];
+else if(i%3==1)
+b+=a[i];
+else
+g+=a[i];
+}
+cout<<al<<" "<<b<<" "<<g<<endl;
+
+	}
+}
+output
+1 
+6
+1 2 3 1 2 3
+5 4 3
